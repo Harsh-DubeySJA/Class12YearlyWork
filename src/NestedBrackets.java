@@ -21,7 +21,7 @@ public class NestedBrackets {
     }
 
     static class StackLinked implements Stack {
-        class Node {
+        static class Node {
             char ch;
             Node next;
 
@@ -69,11 +69,9 @@ public class NestedBrackets {
 
             if (indexPosition != -1) {
                 if (indexPosition < 3) characterStack.push(expression.charAt(i));
-                else {
-                    if (characterStack.isEmpty() || characterStack.pop() != brackets.charAt(indexPosition-3 )) {
+                else if (characterStack.isEmpty() || characterStack.pop() != brackets.charAt(indexPosition-3 )) {
                         isPrecedenceCorrect = false;
                         break;
-                    }
                 }
             }
 
