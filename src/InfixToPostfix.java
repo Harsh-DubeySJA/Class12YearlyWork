@@ -39,7 +39,7 @@ public class InfixToPostfix {
                 ch = top.ch;
                 top = top.next;
             } else {
-                throw new RuntimeException("Underflow: No memory left");
+                throw new RuntimeException("Underflow: No element left");
             }
             return ch;
         }
