@@ -5,18 +5,14 @@ public class ThreeRealNumbers {
         Scanner sc = new Scanner(System.in);
         // Write appropriate statement
         System.out.println("Enter three real Numbers");
-        float a = sc.nextFloat();
-        float b = sc.nextFloat();
-        float c = sc.nextFloat();
-        float absoluteA = Math.abs(a);
-        float absoluteB = Math.abs(b);
-        float absoluteC = Math.abs(c);
+        double a = sc.nextDouble(), b = sc.nextDouble(), c = sc.nextDouble();
+        double absoluteA = Math.abs(a), absoluteB = Math.abs(b), absoluteC = Math.abs(c);
         a -= absoluteA;
         b -= absoluteB;
         c -= absoluteC;
-        float product = absoluteA * absoluteB * absoluteC;
-        float sum = a + b + c;
-        float ans = product / sum;
+        double product = absoluteA * absoluteB * absoluteC;
+        double sum = a + b + c;
+        double ans = product / sum;
         System.out.println("x = " + ans);
         sc.close();
     }
