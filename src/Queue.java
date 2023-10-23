@@ -8,14 +8,14 @@ public class Queue implements QueueInterface {
 
     static class OverflowException extends RuntimeException {
         public OverflowException() {
-        super("Overflow: No space left");
-    }
+            super("Overflow: No space left");
+        }
     }
 
     static class UnderflowException extends RuntimeException {
         public UnderflowException() {
-        super("Underflow: Queue is Empty");
-    }
+            super("Underflow: Queue is Empty");
+        }
     }
 
     private final int[] data;
